@@ -11,5 +11,8 @@ terraform {
 }
 
 provider "azurerm" {
-  features {}
+  client_id = " ${{ env.AZ_CLIENT_ID }}"
+  client_secret = "$ ${{ env.AZ_CLIENT_SECRET}}"
+  tenant_id     = "$ ${{ env.AZ_TENANT_ID }}"
+  subscription_id = "$ ${{ env.AZ_SUBS_ID }}"
 }
